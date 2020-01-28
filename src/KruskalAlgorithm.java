@@ -20,21 +20,22 @@ public class KruskalAlgorithm {
     /**
      * 不能联通的边
      */
-    private static final int MAX_EDGE = Integer.MAX_VALUE;
+    private static final int N = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
         char[] vertexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int[][] matrix = {
-                {0, 6, 10, MAX_EDGE, MAX_EDGE, MAX_EDGE, MAX_EDGE},
+                {0, 6, 10, N, N, N, N},
                 {6, 0, 8, 10, 13, 9, 13},
-                {10, 8, 0, MAX_EDGE, 11, MAX_EDGE, MAX_EDGE},
-                {MAX_EDGE, 10, MAX_EDGE, 0, MAX_EDGE, MAX_EDGE, MAX_EDGE, 7},
-                {MAX_EDGE, 13, 11, MAX_EDGE, 0, 10, MAX_EDGE},
-                {MAX_EDGE, 9, MAX_EDGE, MAX_EDGE, 10, 0, MAX_EDGE},
-                {MAX_EDGE, 13, MAX_EDGE, 7, MAX_EDGE, MAX_EDGE, 0},
+                {10, 8, 0, N, 11, N, N},
+                {N, 10, N, 0, N, N, N, 7},
+                {N, 13, 11, N, 0, 10, N},
+                {N, 9, N, N, 10, 0, N},
+                {N, 13, N, 7, N, N, 0},
         };
 
         KruskalAlgorithm kruskalAlgorithm = new KruskalAlgorithm(vertexs, matrix);
+        kruskalAlgorithm.print();
         kruskalAlgorithm.kruskal();
     }
 
@@ -52,7 +53,7 @@ public class KruskalAlgorithm {
         // 统计边的数量
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
-                if (matrix[i][j] != MAX_EDGE && matrix[i][j] != 0) {
+                if (matrix[i][j] != N && matrix[i][j] != 0) {
                     edgeNum++;
                 }
             }
@@ -151,7 +152,7 @@ public class KruskalAlgorithm {
         int index = 0;
         for (int i = 0; i < vertexs.length; i++) {
             for (int j = 0; j < vertexs.length; j++) {
-                if (matrix[i][j] != MAX_EDGE && matrix[i][j] != 0) {
+                if (matrix[i][j] != N && matrix[i][j] != 0) {
                     edges[index] = new Edge(vertexs[i], vertexs[j], matrix[i][j]);
                     index++;
                 }
