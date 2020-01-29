@@ -1,3 +1,5 @@
+package kmp;
+
 /**
  * @ClassName KMPAlgorithm
  * @Description KMP算法

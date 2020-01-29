@@ -1,3 +1,5 @@
+package prim;
+
 import java.util.Arrays;
 
 /**

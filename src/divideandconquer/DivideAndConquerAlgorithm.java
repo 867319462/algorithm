@@ -1,3 +1,5 @@
+package divideandconquer;
+
 /**
  * @ClassName DivideAndConquerAlgorithm
  * @Description 分治算法

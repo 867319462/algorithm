@@ -1,3 +1,5 @@
+package kruskal;
+
 /**
  * @ClassName KruskalAlgorithm
  * @Description 克鲁斯卡尔算法
@@ -201,7 +203,7 @@ class Edge {
 
     @Override
     public String toString() {
-        return "Edge{" +
+        return "kruskal.Edge{" +
                 "start=" + start +
                 ", end=" + end +
                 ", weight=" + weight +

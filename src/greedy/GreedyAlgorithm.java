@@ -1,3 +1,5 @@
+package greedy;
+
 import java.util.*;
 
 /**
